@@ -12,6 +12,103 @@ body {
   padding: 0;
 }
 
+/* Header */
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0; /* уменьшен верхний и нижний отступ */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0; /* меньше верхнего отступа, чтобы header опустился */
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.main-nav ul li a.active {
+  color: #007bff;
+}
+
+.admin-btn {
+  padding: 10px 18px;
+  background-color: #0066ff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  background-color: #3399ff;
+}
+
+
+/* Кнопка Админ */
+.admin-btn {
+  margin-left: 20px; /* небольшое расстояние от меню */
+  padding: 10px 18px;
+  background-color: #0066ff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  background-color: #3399ff;
+}
+
+/* Адаптивность */
+@media (max-width: 991px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .admin-btn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
 /* Контейнер */
 .container {
   max-width: 1200px;
@@ -26,16 +123,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Специальный стиль для заголовка страницы "О нас" */
-.page-title h1 {
-  text-transform: uppercase; /* все буквы заглавные */
-  font-size: 3rem;           /* увеличенный размер текста */
-  font-weight: 700;           /* жирный текст */
-  color: #007bff;            /* синий цвет */
-  letter-spacing: 2px;       /* расстояние между буквами */
+/* Заголовок страницы "О нас" */
+.page-title {
+  padding: 15px 0;
   text-align: center;
-  margin-bottom: 0;
+  background-color: #cde5fb !important; /* синий фон на всю ширину */
+  width: 100%;
+  box-sizing: border-box;
 }
+
+
+.page-title h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #007bff;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+
 
 /* Абзацы */
 p {

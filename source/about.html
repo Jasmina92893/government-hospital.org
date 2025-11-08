@@ -10,24 +10,29 @@
 
 <!-- Горизонтальное меню -->
 <header class="site-header">
-  <div class="container" style="display:flex; justify-content: space-between; align-items:center; padding: 20px 0;">
+  <div class="header-container container">
     <div class="logo">
-      <a href="/" style="text-decoration:none; font-weight:bold; font-size:1.5rem; color:#007bff;">AnalizGO</a>
+      <a href="/">AnalizGO</a>
     </div>
     <nav class="main-nav">
-      <ul style="list-style:none; display:flex; gap:30px; margin:0; padding:0;">
-      
-        <li><a href="/about" class="active" style="text-decoration:none; color:#007bff;">О нас</a></li>
-        <li><a href="/appointments" style="text-decoration:none; color:#333;">Запись на приём</a></li>
-        <li><a href="/services" style="text-decoration:none; color:#333;">Услуги</a></li>
-        <li><a href="/contact" style="text-decoration:none; color:#333;">Контакты</a></li>
+      <ul>
+        <li><a href="/about" class="active">О нас</a></li>
+        <li><a href="/appointments">Запись на приём</a></li>
+        <li><a href="/services">Услуги</a></li>
+        <li><a href="/contact">Контакты</a></li>
       </ul>
+      <a href="/admin-login" class="admin-btn">Админ</a>
     </nav>
   </div>
 </header>
 
+
+
+
+
+
 <!-- Заголовок страницы -->
-<section class="page-title" style="padding:40px 0; text-align:center; background-color:#f0f8ff;">
+<section class="page-title" style="padding:15px 0; text-align:center; background-color:#f0f8ff;">
   <div class="container">
     <h1>О нас</h1>
   </div>
@@ -36,7 +41,7 @@
 <!-- Our Story / История клиники -->
 <section class="story" aria-labelledby="story-title" lang="ru" style="padding:60px 0;">
   <div class="container" style="display:flex; flex-wrap:wrap; gap:40px;">
-    <div class="col-lg-6" style="flex:1 1 45%; display:flex; flex-direction:column; gap:50px;">
+    <div class="col-lg-6" style="flex:1 1 45%; display:flex; flex-direction:column; gap:70px;">
   <img loading="lazy" src="images/services/service-one.jpg" class="responsive" alt="Фотография клиники" />
   <img loading="lazy" src="images/services/service-six.jpg" class="responsive" alt="Описание" />
 </div>
@@ -64,7 +69,7 @@
 
         <div class="cta-row" role="group" aria-label="Действия" style="margin-top:20px;">
           <a class="btn large-btn" href="/register" role="button" aria-label="Зарегистрироваться">Зарегистрироваться</a>
-          <a class="btn large-btn outline" href="/patient-login" role="button" aria-label="Войти как пациент">Войти (Пациент)</a>
+          <a class="btn large-btn outline" href="/patient-login" role="button" aria-label="Войти как пациент">Войти</a>
         </div>
       </div>
     </div>

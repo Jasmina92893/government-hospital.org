@@ -1,129 +1,145 @@
-/* Общие стили */
+/* Общие настройки */
 body {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #1a1a1a; /* тёмно-серый текст */
-    line-height: 1.6;
-    background-color: #ffffff; /* белый фон страницы */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #1a1a1a;
 }
 
-/* Секция записи на приём */
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* HEADER */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo-text {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #0066ff;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+  color: #0066ff;
+}
+
+/* Секция */
 .appointment-section {
-    padding: 80px 0;
-    background-color: #f0f8ff; /* очень светлый голубой фон */
+  padding: 80px 0;
+  background-color: #f0f8ff;
 }
 
-/* Контейнер с колонками */
-.appointment-section .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* центрируем по горизонтали */
-    align-items: flex-start;
-    gap: 40px; /* расстояние между колонками */
+.appointment-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
 }
 
-/* Левая колонка (форма) */
-.appointment-section .contact-area {
-    flex: 1 1 500px; /* минимальная ширина 500px */
-    max-width: 600px; /* максимум 600px */
+/* Левая колонка */
+.contact-area {
+  flex: 1 1 480px;
+  max-width: 550px;
 }
 
-/* Правая колонка (изображение) */
-.appointment-section .appointment-image-holder {
-    flex: 1 1 400px; /* минимальная ширина 400px */
-    max-width: 500px; /* максимум 500px */
-}
-
-/* Заголовки секции */
 .section-title h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #0066ff; /* ярко-синий заголовок */
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0066ff;
 }
 
-.section-title p {
-    font-size: 1rem;
-    color: #333333; /* тёмно-серый текст */
+.section-title span {
+  color: #0066ff;
 }
 
-/* Форма */
-.contact-area .form-control {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 2px solid #0066ff; /* ярко-синяя рамка */
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background-color: #ffffff; /* белый фон полей */
-    color: #1a1a1a;
+/* Формы */
+.form-control {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid #0066ff;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
-.contact-area .form-control:focus {
-    border-color: #3399ff; /* светлый синий при фокусе */
-    box-shadow: 0 0 8px rgba(0,102,255,0.3);
-    outline: none;
+.form-control:focus {
+  border-color: #3399ff;
+  box-shadow: 0 0 8px rgba(0,102,255,0.3);
+  outline: none;
 }
 
-.contact-area select.form-control {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><path fill='%230066FF' d='M4 6l4 4 4-4z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 12px;
-}
-
-/* Текстовая область */
-.contact-area textarea.form-control {
-    min-height: 120px;
-    resize: none;
+textarea.form-control {
+  resize: none;
+  min-height: 120px;
 }
 
 /* Кнопка */
-.contact-area .btn.large-btn {
-    background-color: #0066ff; /* ярко-синий фон */
-    color: #ffffff;
-    padding: 15px 35px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.btn.large-btn {
+  width: 100%;
+  background: #0066ff;
+  border: none;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.contact-area .btn.large-btn:hover {
-    background-color: #3399ff; /* светло-синий при наведении */
-    color: #ffffff;
+.btn.large-btn:hover {
+  background: #3399ff;
 }
 
-/* Изображение справа */
+/* Фото */
 .appointment-image-holder img {
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,102,255,0.2);
-    object-fit: cover;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,102,255,0.25);
+  object-fit: cover;
 }
 
-/* Мобильная адаптивность */
-@media (max-width: 991px) {
-    .appointment-section {
-        padding: 50px 20px;
-    }
-    
-    .appointment-section .container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
 
-    .appointment-section .contact-area,
-    .appointment-section .appointment-image-holder {
-        max-width: 90%; /* чтобы колонки не были слишком широкими */
-    }
-    
-    .section-title h3 {
-        font-size: 1.6rem;
-    }
-    
-    .contact-area .btn.large-btn {
-        width: 100%;
-        padding: 12px 0;
-    }
+/* Адаптив */
+@media(max-width: 900px) {
+  .appointment-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn.large-btn {
+    width: 100%;
+  }
 }
