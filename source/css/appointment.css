@@ -1,27 +1,27 @@
 /* Общие стили */
 body {
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333; /* текст серый */
+    color: #1a1a1a; /* текст тёмно-серый для контраста */
     line-height: 1.6;
-    background-color: #f9f9f9; /* фон страницы светлый */
+    background-color: #ffffff; /* белый фон страницы */
 }
 
 /* Секция записи на приём */
 .appointment-section {
     padding: 80px 0;
-    background-color: #ffffff; /* белый блок */
+    background-color: #f0f8ff; /* очень светлый голубой фон для блока */
 }
 
 /* Заголовки секции */
 .section-title h3 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #1d3557; /* основной синий, как на about.css */
+    color: #0066ff; /* ярко-синий заголовок */
 }
 
 .section-title p {
     font-size: 1rem;
-    color: #555; /* серый текст */
+    color: #333333; /* тёмно-серый текст */
 }
 
 /* Форма */
@@ -29,21 +29,23 @@ body {
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 2px solid #0066ff; /* ярко-синяя рамка */
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background-color: #ffffff; /* белый фон полей */
+    color: #1a1a1a;
 }
 
 .contact-area .form-control:focus {
-    border-color: #457b9d; /* светлый синий при фокусе */
-    box-shadow: 0 0 5px rgba(69,123,157,0.3);
+    border-color: #3399ff; /* светлый синий при фокусе */
+    box-shadow: 0 0 8px rgba(0,102,255,0.3);
     outline: none;
 }
 
 .contact-area select.form-control {
     appearance: none;
-    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><path fill='gray' d='M4 6l4 4 4-4z'/></svg>");
+    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><path fill='%230066FF' d='M4 6l4 4 4-4z'/></svg>");
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 12px;
@@ -57,8 +59,8 @@ body {
 
 /* Кнопка */
 .contact-area .btn.large-btn {
-    background-color: #1d3557; /* основной синий */
-    color: #fff;
+    background-color: #0066ff; /* ярко-синий фон */
+    color: #ffffff;
     padding: 15px 35px;
     font-size: 1.1rem;
     border: none;
@@ -68,14 +70,14 @@ body {
 }
 
 .contact-area .btn.large-btn:hover {
-    background-color: #457b9d; /* светлый синий при наведении */
-    color: #fff;
+    background-color: #3399ff; /* светло-синий при наведении */
+    color: #ffffff;
 }
 
 /* Изображение справа */
 .appointment-image-holder img {
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,102,255,0.2);
     object-fit: cover;
 }
 
